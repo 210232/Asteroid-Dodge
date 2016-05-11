@@ -26,13 +26,14 @@ body {
     color: #383838;
     padding: 20px 50px;
     font-size: 5em;
+    font-family: minecraft;
     text-decoration: none;
-    background-color: #abc;
+    background-color: #FF0000;
     box-shadow: 15px 15px 80px #555;
 }
   a.button:hover {
     background-color: #383838;
-    color: #abc;
+    color: #FF0000;
   }
 
 
