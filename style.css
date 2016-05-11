@@ -17,7 +17,7 @@ body {
 .splashTitle {
 	color: #fff;
     font-size: 8em;
-    text-transform: uppercase;
+    font-family:minecraft;
     text-shadow: 1px 1px 5px rgba(27, 25, 25, 0.74);
 }
 
