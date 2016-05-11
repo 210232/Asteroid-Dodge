@@ -41,7 +41,8 @@ body {
 /*Stuff below governs the Explore screen*/
 
 #exploreBody {
-	background-image: url("img/exploreHome1.jpg");
+	background-image: url("http://il6.picdn.net/shutterstock/videos/12981236/thumb/1.jpg");
 	background-position: bottom center;
+    background-size: 1200px;
 
 }
