@@ -43,6 +43,11 @@ body {
 #exploreBody {
 	background-image: url("http://il6.picdn.net/shutterstock/videos/12981236/thumb/1.jpg");
 	background-position: bottom center;
-    background-size: 1200px;
+    background-size: 1250px;
 
+}
+
+
+#sprite{
+    background-image: url("img/maincharacter.gif");
 }
