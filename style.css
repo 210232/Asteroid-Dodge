@@ -37,8 +37,11 @@ body {
   }
 
 
-
 /*Stuff below governs the Explore screen*/
+
+#sprite{
+    background-image: url("img/henry.gif");
+}
 
 #exploreBody {
 	background-image: url("http://il6.picdn.net/shutterstock/videos/12981236/thumb/1.jpg");
@@ -48,6 +51,3 @@ body {
 }
 
 
-#sprite{
-    background-image: url("img/maincharacter.gif");
-}
