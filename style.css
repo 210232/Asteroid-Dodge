@@ -49,6 +49,15 @@ body {
     width: 25px;
 }
 
+#sprite2{
+    background-image: url("img/rock.png");
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top:100px;
+    left:600px;
+}
+
 #exploreBody {
 	background-image: url("http://il6.picdn.net/shutterstock/videos/12981236/thumb/1.jpg");
 	background-position: bottom center;

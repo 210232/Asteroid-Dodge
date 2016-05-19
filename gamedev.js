@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
 var main = $("#sprite1");
+var problem = $("#sprite2")
 
 $(document).keydown(function(e) {
   $(main).keydown;
@@ -8,12 +9,13 @@ $(document).keydown(function(e) {
   
   //move left
   case 37:
-    $(main).animate({left: "-=40px"}, 'fast');
+    $(main).animate({left: "-=30px"}, 'fast');
     break;
  //move right
   case 39:
-    $(main).animate({left: "+=40px"}, 'fast');
+    $(main).animate({left: "+=30px"}, 'fast');
     break;
   };
-});
+
+
 });
