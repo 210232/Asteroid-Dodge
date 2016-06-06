@@ -36,6 +36,26 @@ body {
     color: #FF0000;
   }
 
+  #again{
+    height: 100px;
+    width: 400px;
+    border: 5px solid #383838;
+    color: #383838;
+    padding: 20px 50px;
+    font-size: 5em;
+    font-family: minecraft;
+    text-decoration: none;
+    background-color: #FF0000;
+    box-shadow: 15px 15px 80px #555;
+    position: absolute;
+    top:400px;
+    left:460px;
+  }
+  a#again:hover {
+    background-color: #383838;
+    color: #FF0000;
+  }
+
 
 /*Stuff below governs the Explore screen*/
 
@@ -49,13 +69,10 @@ body {
     width: 25px;
 }
 
-#sprite2{
-    background-image: url("img/rock.png");
-    height: 50px;
-    width: 50px;
+#sprite2{ 
     position: absolute;
     top:100px;
-    left:600px;
+    left:1100px;
 }
 
 #exploreBody {
@@ -65,4 +82,166 @@ body {
 
 }
 
+.asteroid{
+background-image: url("img/rock.png");
+    height: 50px;
+    width: 50px;
+}
+.asteroid2{
+background-image: url("img/rock.png");
+    height: 50px;
+    width: 50px;
+}
+
+#sprite3{
+    position: absolute;
+    top:100px;
+    left:700px;
+}
+
+#sprite4{
+    position: absolute;
+    top:100px;
+    left:800px;
+}
+
+#sprite5{
+    position: absolute;
+    top:100px;
+    left:900px;
+}
+
+#sprite6{
+    position: absolute;
+    top:100px;
+    left:600px;
+}
+
+#sprite7{
+    position: absolute;
+    top:100px;
+    left:500px;
+}
+
+#sprite8{
+    position: absolute;
+    top:100px;
+    left:50px;
+}
+
+#sprite9{
+    position: absolute;
+    top:100px;
+    left:200px;
+}
+
+#sprite10{
+    position: absolute;
+    top:100px;
+    left:300px;
+}
+
+#sprite11{
+    position: absolute;
+    top:100px;
+    left:1000px;
+}
+
+#sprite12{
+    position: absolute;
+    top:100px;
+    left:400px;
+}
+
+#sprite13{
+    position: absolute;
+    top:100px;
+    left:400px;
+}
+#sprite14{
+    position: absolute;
+    top:100px;
+    left:700px;
+}
+
+#sprite15{
+    position: absolute;
+    top:100px;
+    left:800px;
+}
+
+#sprite16{
+    position: absolute;
+    top:100px;
+    left:900px;
+}
+
+#sprite17{
+    position: absolute;
+    top:100px;
+    left:600px;
+}
+
+#sprite18{
+    position: absolute;
+    top:100px;
+    left:500px;
+}
+
+#sprite19{
+    position: absolute;
+    top:100px;
+    left:50px;
+}
+
+#sprite20{
+    position: absolute;
+    top:100px;
+    left:200px;
+}
+
+#sprite21{
+    position: absolute;
+    top:100px;
+    left:300px;
+}
+
+#sprite22{
+    position: absolute;
+    top:100px;
+    left:1000px;
+}
+
+#sprite23{
+    position: absolute;
+    top:100px;
+    left:400px;
+}
+
+#sprite24{
+    position: absolute;
+    top:100px;
+    left:400px;
+}
+#sprite25{ 
+    position: absolute;
+    top:100px;
+    left:1100px;
+}
+#spawner{
+    height: 25px;
+    width: 1500px;
+    background-color:green; 
+    position: absolute;
+    top: 690px;
+    left:0px;
+}
+ #scorebox{
+    height: 50px;
+    width: 150px;
+    background-color:red; 
+    position: absolute;
+    top: 70px;
+    left:1200px;
+ }
 
