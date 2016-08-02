@@ -82,7 +82,7 @@ $(document).ready(function () {
         $(asteroid).hide();
         $(asteroid2).show();
         $(asteroid2).animate({ "top": "+=570px" }, 2000);
-        var score = score + 1;
+        score++;
         $("#scorebox").html("Your score is " + score);
       }
     });
