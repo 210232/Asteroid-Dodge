@@ -1,11 +1,13 @@
 $(document).ready(function () {
+  // Variable Declaration and Definition
   var main = $("#sprite1"),
       asteroid = $(".asteroid"),
       asteroid2 = $(".asteroid2"),
       score = 0;
 
+  // Character Movement
   $(document).keydown(function (e) {
-    $(main).keydown; // NOTE: You mean $(main).keydown()? (Method Call)
+    // $(main).keydown; // NOTE: You mean $(main).keydown()? (Method Call)
     switch(e.which) {
       //move left
       case 37:
@@ -18,6 +20,7 @@ $(document).ready(function () {
     };
   });//function(e) end
 
+  // Give each asteroid a random horizontal starting position
   $(asteroid).each(function () {
     var posx = Math.round(Math.random() * $(window).width())-20;
     $(this).css("left", posx + "px");
@@ -27,10 +30,11 @@ $(document).ready(function () {
     $(this).css("left", posx + "px");
   });
 
-  $("#again").hide();
-  $(asteroid2).hide();
+  $("#again").hide(); // Hide "Try Again" button
+  $(asteroid2).hide(); // Hide 2nd round of asteroids
   $(asteroid).animate({ "top": "+=570px" }, 2000);
 
+  // Collision Detection Algorithm
   function collision($div1, $div2) {
     var x1 = $div1.offset().left;
     var y1 = $div1.offset().top;
@@ -59,7 +63,7 @@ $(document).ready(function () {
     //function that makes the magic happen! Below, jQuery prints the word "FALSE" into #results
     //IMPORTANT!!! Below declares the class of divs that your sprite collides with!!
     $.each($(asteroid), function() {
-      if (collision($(main), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
+      if (collision($(main), $(this)) /* Do the following if the player collides with any of the asteroids in Round 1 */) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
         $("#sprite1").hide();
         $(".asteroid").hide();
@@ -67,7 +71,9 @@ $(document).ready(function () {
         $("#again").show();
         $("#spawner").hide();
         $(asteroid2).hide();
-        $("#score").hide();
+        window.setInterval(function () {
+          $("#score").hide();
+        });
         //all the actions that happen during a collision go here
       }
     });
@@ -82,6 +88,13 @@ $(document).ready(function () {
         $(asteroid).hide();
         $(asteroid2).show();
         $(asteroid2).animate({ "top": "+=570px" }, 2000);
+
+        /* Addition: Try moving first round of asteroids to top and see what happens */
+        $(asteroid).each(function () {
+          $(this).css("top", "0px");
+        });
+        /* End of Addition */
+
         score++;
         $("#scorebox").html("Your score is " + score);
       }
@@ -95,7 +108,17 @@ $(document).ready(function () {
       if (collision($("#spawner"), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
         $(asteroid2).hide();
+        /* Addition - Show first wave of asteroids again (to make game endless) */
+        $(asteroid).show();
+        $(asteroid).animate({"top": "+=570px"}, 2000);
+        $(asteroid2).each(function () {
+          $(this).css("top", "0px");
+        });
+        /* End of Addition */
         score++;
+        /* Addition - I think we have to show the updated score? */
+        $("#scorebox").html("Your score is " + score);
+        /* End of Addition */
       }
     });
   });
@@ -104,7 +127,7 @@ $(document).ready(function () {
     //function that makes the magic happen! Below, jQuery prints the word "FALSE" into #results
     //IMPORTANT!!! Below declares the class of divs that your sprite collides with!!
     $.each($(asteroid2), function() {
-      if (collision($(main), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
+      if (collision($(main), $(this)) /* Do the following if the player collides with the 2nd round of asteroids */) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
         $("#sprite1").hide();
         $(".asteroid2").hide();
@@ -112,6 +135,12 @@ $(document).ready(function () {
         $("#again").show();
         $("#spawner").hide();
         //all the actions that happen during a collision go here
+        /* Addition - Trying to follow everything for collision event with .asteroid here */
+        $(asteroid).hide();
+        window.setInterval(function () {
+          $("#score").hide();
+        });
+        /* End of Addition */
       }
     });
   });
