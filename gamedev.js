@@ -85,14 +85,20 @@ $(document).ready(function () {
     $.each($(asteroid), function() {
       if (collision($("#spawner"), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
+        $(asteroid).animate({"top": "-=570px"}, 0);
         $(asteroid).hide();
         $(asteroid2).show();
         $(asteroid2).animate({ "top": "+=570px" }, 2000);
 
         /* Addition: Try moving first round of asteroids to top and see what happens */
-        $(asteroid).each(function () {
-          $(this).css("top", "0px");
-        });
+        /*
+          $(asteroid).each(function () {
+            $(this).css("top", "0px");
+          });
+          $(asteroid2).each(function () {
+            $(this).css("top", "0px");
+          });
+        */
         /* End of Addition */
 
         score++;
@@ -107,13 +113,19 @@ $(document).ready(function () {
     $.each($(asteroid2), function() {
       if (collision($("#spawner"), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
+        $(asteroid2).animate({"top": "-=570px"}, 0);
         $(asteroid2).hide();
         /* Addition - Show first wave of asteroids again (to make game endless) */
         $(asteroid).show();
         $(asteroid).animate({"top": "+=570px"}, 2000);
-        $(asteroid2).each(function () {
-          $(this).css("top", "0px");
-        });
+        /*
+          $(asteroid).each(function () {
+            $(this).css("top", "0px");
+          });
+          $(asteroid2).each(function () {
+            $(this).css("top", "0px");
+          });
+        */
         /* End of Addition */
         score++;
         /* Addition - I think we have to show the updated score? */
