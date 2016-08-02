@@ -74,12 +74,14 @@ $(document).ready(function () {
         window.setInterval(function () {
           $("#score").hide();
         });
+        clearInterval(asteroidSpawner);
+        clearInterval(asteroid2Spawner);
         //all the actions that happen during a collision go here
       }
     });
   });
 
-  window.setInterval(function() {
+  var asteroidSpawner = window.setInterval(function() {
     //function that makes the magic happen! Below, jQuery prints the word "FALSE" into #results
     //IMPORTANT!!! Below declares the class of divs that your sprite collides with!!
     $.each($(asteroid), function() {
@@ -107,7 +109,7 @@ $(document).ready(function () {
     });
   });
 
-  window.setInterval(function() {
+  var asteroid2Spawner = window.setInterval(function() {
     //function that makes the magic happen! Below, jQuery prints the word "FALSE" into #results
     //IMPORTANT!!! Below declares the class of divs that your sprite collides with!!
     $.each($(asteroid2), function() {
@@ -152,6 +154,8 @@ $(document).ready(function () {
         window.setInterval(function () {
           $("#score").hide();
         });
+        clearInterval(asteroidSpawner);
+        clearInterval(asteroid2Spawner);
         /* End of Addition */
       }
     });
