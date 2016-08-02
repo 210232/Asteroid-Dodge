@@ -1,8 +1,8 @@
 $(document).ready(function () {
   var main = $("#sprite1"),
-    asteroid = $(".asteroid"),
-    asteroid2 = $(".asteroid2"),
-    score = 0;
+      asteroid = $(".asteroid"),
+      asteroid2 = $(".asteroid2"),
+      score = 0;
 
   $(document).keydown(function (e) {
     $(main).keydown; // NOTE: You mean $(main).keydown()? (Method Call)
@@ -18,11 +18,11 @@ $(document).ready(function () {
     };
   });//function(e) end
 
-  $(asteroid).each(function(i){
+  $(asteroid).each(function () {
     var posx = Math.round(Math.random() * $(window).width())-20;
     $(this).css("left", posx + "px");
   });
-  $(asteroid2).each(function(i){
+  $(asteroid2).each(function () {
     var posx = Math.round(Math.random() * $(window).width())-20;
     $(this).css("left", posx + "px");
   });
@@ -83,11 +83,11 @@ $(document).ready(function () {
         $(asteroid2).show();
         $(asteroid2).animate({ "top": "+=570px" }, 2000);
         var score = score + 1;
-        $("#scorebox").html("Your score is" + score);
+        $("#scorebox").html("Your score is " + score);
       }
     });
   });
-  
+
   window.setInterval(function() {
     //function that makes the magic happen! Below, jQuery prints the word "FALSE" into #results
     //IMPORTANT!!! Below declares the class of divs that your sprite collides with!!
@@ -95,7 +95,7 @@ $(document).ready(function () {
       if (collision($("#spawner"), $(this))) { //another if statement. If #myCar DOES hit something, the following will happen:
         //if #myCar hits .othercar, then #results will say "TRUE"
         $(asteroid2).hide();
-        var score = score + 1;
+        score++;
       }
     });
   });
