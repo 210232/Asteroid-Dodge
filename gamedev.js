@@ -71,9 +71,6 @@ $(document).ready(function () {
         $("#again").show();
         $("#spawner").hide();
         $(asteroid2).hide();
-        window.setInterval(function () {
-          $("#score").hide();
-        });
         clearInterval(asteroidSpawner);
         clearInterval(asteroid2Spawner);
         //all the actions that happen during a collision go here
@@ -151,9 +148,6 @@ $(document).ready(function () {
         //all the actions that happen during a collision go here
         /* Addition - Trying to follow everything for collision event with .asteroid here */
         $(asteroid).hide();
-        window.setInterval(function () {
-          $("#score").hide();
-        });
         clearInterval(asteroidSpawner);
         clearInterval(asteroid2Spawner);
         /* End of Addition */
